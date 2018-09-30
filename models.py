@@ -52,3 +52,11 @@ class Account(models.Model):
 
 	def __str__(self):
 		return self.account_name
+
+class Email(models.Model):
+	subject = models.CharField(max_length=60)
+	received_date_time = models.DateTimeField('received date time')
+	sender = models.CharField(max_length=30)
+
+	def __str__(self):
+		return self.subject
